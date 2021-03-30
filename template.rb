@@ -139,6 +139,8 @@ file 'app/javascript/packs/application.css', <<-CSS
 CSS
 prepend_file 'app/javascript/packs/application.js', 'import "./application.css";'
 
+file 'Procfile', 'web: bundle exec puma -C config/puma.rb'
+
 after_bundle do
   generate 'rspec:install'
   remove_file '.rspec'
