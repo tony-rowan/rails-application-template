@@ -90,12 +90,9 @@ remove_dir 'app/assets'
 add_file 'app/javascript/images/.keep'
 
 run 'yarn add --dev --exact prettier'
-run 'yarn add --dev lint-staged husky'
-
 file '.prettierrc.json', <<~JS
   {}
 JS
-
 file '.prettierignore', <<~IGNORE
   node_modules
   public/packs
@@ -103,13 +100,12 @@ file '.prettierignore', <<~IGNORE
   tmp
 IGNORE
 
-file '.huskyrc.json', <<~JSON
-  {
-    "hooks": {
-      "pre-commit": ["bin/yarn lint-staged && bin/rspec"]
-    }
-  }
-JSON
+run 'yarn add --dev lint-staged husky'
+run 'npx husky-init && yarn'
+gsub_file '.husky/pre-commit', "npm test\n", <<~SH
+  bin/yarn lint-staged
+  bin/rspec
+SH
 
 file '.lintstagedrc', <<~JSON
   {
@@ -155,7 +151,7 @@ after_bundle do
 
   git :init
   git add: '.'
-  git commit: "-m 'Initial commit'"
+  git commit: "-m 'Initial commit' --no-verify"
 
   run 'bin/setup'
 end
