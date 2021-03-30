@@ -7,7 +7,7 @@ To create a new Rails app with this template (and the options it is
 best suited for) run:
 
 ```
-rails new hello-heroku --database=postgresql --webpack=stimulus --minimal --skip-sprockets --skip-test --template=https://raw.githubusercontent.com/tony-rowan/rails-appliction-template/main/template.rb
+rails new hello-heroku --database=postgresql --webpack=stimulus --minimal --skip-sprockets --skip-test --template=https://raw.githubusercontent.com/tony-rowan/rails-application-template/main/template.rb
 ```
 
 ## Exaplanation
