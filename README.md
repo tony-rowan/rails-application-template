@@ -23,3 +23,4 @@ This template does a few things.
 - Installs Tailwindcss
 - Removes sprockets and all non-webpack based assets entirely
 - Adds a `docker-compose.yml` file so you don't have to run Postgres locally
+- Adds a basic `Profile`
