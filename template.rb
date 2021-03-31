@@ -155,5 +155,6 @@ after_bundle do
   git add: '.'
   git commit: "-m 'Initial commit' --no-verify"
 
-  run 'bin/setup'
+  puts 'To install dependencies and start services run the following:'
+  puts '  bin/setup'
 end
