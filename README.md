@@ -16,12 +16,12 @@ This template does a few things.
 - Completely rewrites the Gemfile to make it easier on the eyes, but drops the Windows support
 - Installs RSpec with sensible defaults
 - Installs Rubocop with a sensible styles guide
-- Installs factory_bot and sets the generator to have the postfix `_factory`
-- Installs shoulda_matchers and includes the methods in all tests 
+- Installs `factory_bot` and sets the generator to have the postfix `_factory`
+- Installs `shoulda_matchers` and includes the methods in all tests
 - Configures the project to use asdf - a `.tool-versions` file rather than a `.ruby-version` file
 - Installs and configures Prettier
 - Installs and configures husky and lint-staged to run Prettier and Rubocop on commit
-- Installs Tailwindcss
+- Installs TailwindCSS
 - Removes sprockets and all non-webpack based assets entirely
 - Adds a `docker-compose.yml` file so you don't have to run Postgres locally
 - Adds a basic `Profile`

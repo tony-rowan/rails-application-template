@@ -152,6 +152,12 @@ after_bundle do
   run 'bundle binstubs rspec-core'
   append_to_file 'spec/rails_helper.rb', <<~RUBY
 
+    RSpec.configure do |config|
+      config.include(FactoryBot::Syntax::Methods)
+    end
+  RUBY
+  append_to_file 'spec/rails_helper.rb', <<~RUBY
+
     Shoulda::Matchers.configure do |config|
       config.integrate do |with|
         with.test_framework :rspec
