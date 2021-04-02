@@ -17,6 +17,7 @@ This template does a few things.
 - Installs RSpec with sensible defaults
 - Installs Rubocop with a sensible styles guide
 - Installs factory_bot and sets the generator to have the postfix `_factory`
+- Installs shoulda_matchers and includes the methods in all tests 
 - Configures the project to use asdf - a `.tool-versions` file rather than a `.ruby-version` file
 - Installs and configures Prettier
 - Installs and configures husky and lint-staged to run Prettier and Rubocop on commit

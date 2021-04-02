@@ -150,6 +150,15 @@ after_bundle do
     --require spec_helper
   RSPEC
   run 'bundle binstubs rspec-core'
+  append_to_file 'spec/rails_helper.rb', <<~RUBY
+
+    Shoulda::Matchers.configure do |config|
+      config.integrate do |with|
+        with.test_framework :rspec
+        with.library :rails
+      end
+    end
+  RUBY
 
   git :init
   git add: '.'
